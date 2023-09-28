@@ -10,7 +10,7 @@ export default function VideoPlayer() {
   useEffect(() => {
     // Faça uma solicitação à API para obter a URL do vídeo com base no ID
     axios
-      .get(`http://localhost:3000/movies/${id}`) // Usar o ID da rota na solicitação
+      .get(`https://api-faunaflix.onrender.com/movies/${id}`) // Usar o ID da rota na solicitação
       .then((response) => {
         const videoUrlFromApi = response.data;
 

@@ -14,7 +14,7 @@ export default function Home() {
 
   function apiPoke(count) {
     axios
-      .get(`http://localhost:3000/movies`)
+      .get(`https://api-faunaflix.onrender.com/movies`)
       .then((response) => {
         console.log(response.data.videos);
         setData(response.data.videos);
