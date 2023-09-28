@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import "./Home.css";
+import "./lista.css";
 
 export default function Lista() {
   const [count, setCount] = useState(1);
@@ -27,7 +27,7 @@ export default function Lista() {
 
   return (
     <div className="container">
-      <h1 className="title">Meus Vídeos</h1>
+      <h1 className="title">Petflix</h1>
       <div className="video-list">
         {show ? (
           <div className="video-grid">
@@ -39,7 +39,6 @@ export default function Lista() {
                     alt={`Thumbnail for ${movie.nome}`}
                     className="video-thumbnail"
                   />
-                  <h2 className="video-title">{movie.nome}</h2>
                 </div>
               </Link>
             ))}

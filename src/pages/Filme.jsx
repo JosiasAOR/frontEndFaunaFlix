@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+import "./video.css"; // Importe o arquivo CSS aqui
 
 export default function VideoPlayer() {
   const [videoUrl, setVideoUrl] = useState("");
@@ -17,7 +18,7 @@ export default function VideoPlayer() {
         console.log(id);
         setVideoUrl(videoUrlFromApi);
         console.log("videoURL>", videoUrl.videoUrl);
-        setShow(true)
+        setShow(true);
       })
       .catch((error) => {
         console.error("Erro ao obter a URL do vídeo:", error);
@@ -25,24 +26,16 @@ export default function VideoPlayer() {
   }, [id]);
 
   return (
-    <div>
-       {show && (
-      <h1>{videoUrl.video.nome}</h1>
-       )}
+    <div className="video-player-container">
       {show && (
-        
-        <video width="400" controls="controls">
+        <h1>{videoUrl.video.nome}</h1>
+      )}
+      {show && (
+        <video width="400" controls="controls" className="video">
           <source src={videoUrl.video.urlvideo} type="video/mp4" />
           Seu navegador não suporta a reprodução de vídeo.
         </video>
       )}
-      <button
-        onClick={() => {
-          console.log(videoUrl.video.urlvideo);
-        }}
-      >
-        MOSTRAR CONSOLE
-      </button>
     </div>
   );
 }

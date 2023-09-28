@@ -9,7 +9,6 @@ import Home from './pages/Home'
 const router = createBrowserRouter([
   { path: '/movies', element: <Lista /> },
   { path: '/movies/:id', element: <Filme /> },
-  { path: '/', element: <Home /> }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
