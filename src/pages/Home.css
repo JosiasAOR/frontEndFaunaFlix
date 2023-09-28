@@ -1,4 +1,72 @@
-.pokemons{
+/* Estilo Netflix-like */
+.container {
     display: flex;
+    flex-direction: column;
+    background-color: #111;
+    color: #fff;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .video-list {
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-}
+  }
+  
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .video-link {
+    text-decoration: none;
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .video-link:hover {
+    transform: scale(1.05);
+  }
+  
+  .video-card {
+    background-color: #333;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .video-thumbnail {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .video-title {
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .loading {
+    font-size: 18px;
+    color: #fff;
+  }
+  

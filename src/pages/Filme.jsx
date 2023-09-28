@@ -26,7 +26,11 @@ export default function VideoPlayer() {
 
   return (
     <div>
+       {show && (
+      <h1>{videoUrl.video.nome}</h1>
+       )}
       {show && (
+        
         <video width="400" controls="controls">
           <source src={videoUrl.video.urlvideo} type="video/mp4" />
           Seu navegador não suporta a reprodução de vídeo.
